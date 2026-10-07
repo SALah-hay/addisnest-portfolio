@@ -1,0 +1,13 @@
+{
+  "name": "addisnest-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev:shop": "npm run dev --workspace=@addisnest/ecommerce",
+    "dev:admin": "npm run dev --workspace=@addisnest/admin",
+    "build": "npm run build --workspace=@addisnest/ecommerce && npm run build --workspace=@addisnest/admin",
+    "typecheck": "npm run typecheck --workspace=@addisnest/ecommerce && npm run typecheck --workspace=@addisnest/admin"
+  },
+  "devDependencies": { "typescript": "^5.7.3" }
+}
